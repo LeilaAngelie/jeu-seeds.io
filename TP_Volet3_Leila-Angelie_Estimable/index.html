@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Lien au fichier CSS-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Liens au fichiers JS --->
+    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/personnage.js" defer></script>
+    <script src="assets/js/graines.js" defer ></script>
+    <script src="assets/js/points.js" defer ></script>
+    <script src="assets/js/restart.js" defer></script>
+    <title>Jeu Volet3</title>
+</head>
+<body>
+    <header>
+        <h1>Jeu de Jardinage</h1>
+    </header>
+    <section>
+        <canvas id="monCanvas" width="800" height="500"></canvas>
+        <div>
+            <!-- Boutton Démarrer et Arreter-->
+            <button type="button" id="btnStart">Démarrer</button>
+            <button type="button" id="btnStop">Arrêter</button>
+        </div>
+        <!-- Background -->
+        <img src="assets/img/background.png" id="bgd" class="invisible">
+        <!-- Sprite images -->
+        <img src="assets/img/SteamMan/SteamMan_idle.png" alt="SteamMan idle" class="invisible">
+        <img src="assets/img/SteamMan/SteamMan_walk.png" alt="SteamMan walk" class="invisible">
+        <img src="assets/img/SteamMan/SteamMan_run.png" alt="SteamMan run" class="invisible">
+        <img src="assets/img/SteamMan/SteamMan_death.png" alt="SteamMan death" class="invisible">
+
+
+        <!--Graines/Obstacles-->
+        <img src="assets/img/almond.png" alt="almond" class="invisible">
+        <img src="assets/img/coffeebean.png" alt="coffee" class="invisible">
+        <img src="assets/img/fruitseed.png" alt="fruit" class="invisible">
+        <img src="assets/img/sunflowerseed.png" alt="sunflower" class="invisible">
+
+        <!-- GameOver/YouWin/Sound-->
+         <img src="assets/img/gameOver.png" alt="gameOver" class="invisible">
+         <img src="assets/img/youWin.png" alt="youWin" class="invisible">
+         <img src="assets/img/heart.png" alt="vies" class="invisible">
+         <audio src="assets/son/sonJeu.mp3" id="sonJeu" class="invisible"></audio>
+         <audio src="assets/son/sonPoint.mp3" id="sonPoint" class="invisible"></audio>
+         <audio src="assets/son/sonFinJeu.mp3" id="sonFinJeu" class="invisible"></audio>
+         <audio src="assets/son/youWin.mp3" id="sonYouWin" class="invisible"></audio>
+
+       
+    </section>
+    <section>
+        <h2> Règle du Jeu</h2>
+        <h3>Cliquer sur le boutton "Démarrer" pour Démarrer le jeu et le boutton "Arrêter" pour arreter le jeu.</h3>
+        <h3> Tapper sur la barre espace pour recommencer le jeu </h3>
+        <h3> Touches pour bouger le SteamMan</h3>
+        <p> a = idle</p> 
+        <p> s = marche à droite</p> 
+        <p> d = courrir à droite</p> 
+        <p> w = marche à gauche</p> 
+        <p> q = courrir à gauche</p>
+        <h3> But du Jeu</h3>
+        <p> Ramasser seulement les graines de tournesols et accumuller 2000 points(16graines) et gagné la partie.
+            Si vous ramasser d'autres type de graines vous perdez une vie et le jeu s'arrête quand vous les perdez toutes.
+        </p>
+        
+    </section>
+</body>
+</html>
